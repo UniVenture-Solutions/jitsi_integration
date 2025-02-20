@@ -6,7 +6,18 @@
  "engine": "InnoDB",
  "field_order": [
   "meeting_name",
-  "participants"
+  "status",
+  "column_break_njmw",
+  "from_datetime",
+  "column_break_dovf",
+  "to_datetime",
+  "section_break_ghpe",
+  "meeting_agenda",
+  "meeting_details",
+  "section_break_oncr",
+  "participants",
+  "section_break_qtcl",
+  "guests"
  ],
  "fields": [
   {
@@ -21,11 +32,72 @@
    "fieldtype": "Table",
    "label": "Participants",
    "options": "JitSi Participants"
+  },
+  {
+   "fieldname": "from_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "From Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "To Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_njmw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dovf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_oncr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_qtcl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "guests",
+   "fieldtype": "Table",
+   "label": "Guests",
+   "options": "JitSi Guests"
+  },
+  {
+   "fieldname": "section_break_ghpe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "meeting_agenda",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meeting Agenda",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_details",
+   "fieldtype": "Small Text",
+   "label": "Meeting Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Created\nInvited\nRescheduled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-13 09:35:00.193739",
+ "modified": "2025-02-17 17:30:58.331361",
  "modified_by": "Administrator",
  "module": "JitSi Integration",
  "name": "JitSi Meeting",
@@ -40,6 +112,19 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
    "share": 1,
    "write": 1
   }
