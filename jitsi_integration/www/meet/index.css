@@ -29,3 +29,9 @@
 .page-card .page-card-head .indicator::before {
     margin: 0 6px 0.5px 0px;
 }
+
+.hidden {
+    display: none;
+    opacity: 0;
+    visibility: 0;
+}

@@ -1,12 +1,10 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-    {% if frappe.session.user and frappe.session.user != "Guest" %}
-        <main class="title-body">
-            <h1 class="primary-heading">Authenticating, Please Wait...</h1>
-        </main>
-    {% else %}
-      <div class="page-card">
+      <main class="title-body">
+          <h1 class="primary-heading">Authenticating, Please Wait...</h1>
+      </main>
+      <div class="page-card unauthorized hidden">
         <h5 class="page-card-head">
           <span class="indicator red">Not Permitted</span>
         </h5>
@@ -17,5 +15,4 @@
           </div>
         </div>
       </div>
-    {% endif %}
 {% endblock %}

@@ -9,6 +9,7 @@
   "status",
   "column_break_njmw",
   "from_datetime",
+  "event_uid",
   "column_break_dovf",
   "to_datetime",
   "section_break_ghpe",
@@ -93,11 +94,16 @@
    "in_list_view": 1,
    "label": "Status",
    "options": "Created\nInvited\nRescheduled"
+  },
+  {
+   "fieldname": "event_uid",
+   "fieldtype": "Data",
+   "label": "Event UID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-17 17:30:58.331361",
+ "modified": "2025-04-18 16:33:03.619781",
  "modified_by": "Administrator",
  "module": "JitSi Integration",
  "name": "JitSi Meeting",
@@ -131,5 +137,18 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Created"
+  },
+  {
+   "color": "Green",
+   "title": "Invited"
+  },
+  {
+   "color": "Yellow",
+   "title": "Rescheduled"
+  }
+ ]
 }
