@@ -12,7 +12,8 @@
   "generate_key",
   "column_break_kzdw",
   "domain",
-  "audiences"
+  "audiences",
+  "email_account"
  ],
  "fields": [
   {
@@ -53,13 +54,19 @@
    "fieldname": "generate_key",
    "fieldtype": "Button",
    "label": "Generate Key"
+  },
+  {
+   "fieldname": "email_account",
+   "fieldtype": "Link",
+   "label": "Email Account",
+   "options": "Email Account"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-04-26 11:50:04.842026",
+ "modified": "2025-05-30 15:15:46.271960",
  "modified_by": "Administrator",
  "module": "JitSi Integration",
  "name": "JitSi Settings",
