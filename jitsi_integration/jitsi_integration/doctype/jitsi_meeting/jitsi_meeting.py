@@ -27,7 +27,10 @@ class JitSiMeeting(Document):
 	@frappe.whitelist()
 	def send_invitation(self, domain, user_invitation_mode):
 		user_url = f"{domain}/meet?room={self.name}"
-		event = EventScheduler(user_url, self.meeting_name, "Staging Development")
+		email_account = frappe.db.get_single_value("JitSi Settings", "email_account")
+		if not email_account:
+			frappe.throw("Please set the Email Account in JitSi Settings")
+		event = EventScheduler(user_url, self.meeting_name, email_account)
 		response = event.create_event(
 			self.meeting_agenda,
 			self.meeting_details,
